@@ -1,0 +1,41 @@
+.footer {
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 4rem;
+  padding: 2rem 1.5rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #6b7280;
+}
+
+.link {
+  cursor: pointer;
+  transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover {
+  color: #374151;
+}
