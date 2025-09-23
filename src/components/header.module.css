@@ -41,3 +41,8 @@
   color: #f3b200;
   text-decoration: none;
 }
+
+.navLink.active {
+  color: blue;
+  font-weight: bold;
+}

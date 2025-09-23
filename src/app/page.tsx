@@ -1,13 +1,12 @@
 import { FC } from "react";
 import { rackets } from "../../public/mockData";
-import ImageCarousel from "@/components/Carousel";
+import RacketCarousel from "@/components/Carousel";
 
 const Page: FC = () => {
-  const data = rackets;
   return (
     <div>
       <main>
-        <ImageCarousel dataRacket={data} />
+        <RacketCarousel dataRacket={rackets} />
       </main>
     </div>
   );

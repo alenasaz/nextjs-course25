@@ -1,0 +1,5 @@
+.racketsPageWrapper {
+  display: "flex";
+  gap: 24;
+  align-items: "flex-start";
+}

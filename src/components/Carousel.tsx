@@ -12,7 +12,7 @@ interface ImageCarouselProps {
   interval?: number;
 }
 
-export default function ImageCarousel({
+export default function RacketCarousel({
   dataRacket,
   autoPlay = true,
   interval = 5000,

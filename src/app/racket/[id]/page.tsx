@@ -15,6 +15,11 @@ const RacketPage = async ({ params }: Props) => {
   const racket = rackets.find(
     (racket): racket is RacketType => racket.id == Number(id)
   );
+
+  if (!racket) {
+    return null;
+  }
+
   return <div>{racket && <Racket racket={racket} />}</div>;
 };
 
