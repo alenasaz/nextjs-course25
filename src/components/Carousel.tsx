@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import styles from "./carousel.module.css";
-import { RacketType } from "./CarouselCard";
+import { RacketType } from "@/types/types";
 
 interface ImageCarouselProps {
   dataRacket: RacketType[];

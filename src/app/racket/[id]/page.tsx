@@ -1,26 +1,27 @@
 import Racket from "@/components/RacketCard";
-import { rackets } from "../../../../public/mockData";
-import { RacketType } from "@/components/CarouselCard";
+import { getRacketById } from "@/services/get-racket-by-id";
 
 type Props = {
   params: Promise<{ id: string }>;
 };
 
-export const generateStaticParams = async () => {
-  return [{ id: "1" }, { id: "2" }, { id: "3" }];
-};
-
 const RacketPage = async ({ params }: Props) => {
   const { id } = await params;
-  const racket = rackets.find(
-    (racket): racket is RacketType => racket.id == Number(id)
-  );
+  const { data, isError } = await getRacketById({ id });
 
-  if (!racket) {
+  if (isError) {
+    return "error";
+  }
+
+  if (!data) {
     return null;
   }
 
-  return <div>{racket && <Racket racket={racket} />}</div>;
+  return (
+    <div>
+      <Racket racket={data} />
+    </div>
+  );
 };
 
 export default RacketPage;
