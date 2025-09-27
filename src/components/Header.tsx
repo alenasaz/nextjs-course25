@@ -35,6 +35,15 @@ const Header = () => {
           >
             Ракетки
           </Link>
+          <Link
+            prefetch={false}
+            href="/top10"
+            className={`${styles.navLink} ${
+              isActive("/top10") ? styles.active : ""
+            }`}
+          >
+            Топ-10
+          </Link>
         </div>
       </div>
     </header>

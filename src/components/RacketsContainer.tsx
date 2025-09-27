@@ -1,12 +1,13 @@
 import { FC } from "react";
 import RacketCarousel from "./Carousel";
 import { getRackets } from "@/services/get-rackets";
+import { notFound } from "next/navigation";
 
 const RacketsContainer: FC = async () => {
   const { data, isError } = await getRackets({ page: 1, limit: 10 });
 
-  if (isError) throw new Error("Failed to load rackets");
-  if (!data) throw new Error("No rackets found");
+  if (isError) return notFound();
+  if (!data) return notFound();
 
   return <RacketCarousel dataRacket={data} />;
 };
