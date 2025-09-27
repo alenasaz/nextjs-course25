@@ -1,4 +1,4 @@
-import { RacketType } from "./CarouselCard";
+import { RacketType } from "@/types/types";
 import Racket from "./RacketCard";
 import styles from "./racketList.module.css";
 import Link from "next/link";

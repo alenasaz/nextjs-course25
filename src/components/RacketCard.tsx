@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import styles from "./racket.module.css"; // Импорт CSS модуля
-import { RacketType } from "./CarouselCard";
+import styles from "./racket.module.css";
+import { RacketType } from "@/types/types";
 
 type RacketProps = {
   racket: RacketType;
