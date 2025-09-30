@@ -1,3 +1,4 @@
+import { BASE_API_URL } from "@/constants/constants";
 import { RacketType, Response } from "@/types/types";
 
 interface Params {
@@ -10,7 +11,7 @@ export const getRackets = async ({
   limit = 2,
 }: Params): Promise<Response<RacketType[]>> => {
   const result = await fetch(
-    `http://localhost:4000/api/products?page=${page}&limit=${limit}`
+    `${BASE_API_URL}/products?page=${page}&limit=${limit}`
   );
 
   if (!result.ok) {

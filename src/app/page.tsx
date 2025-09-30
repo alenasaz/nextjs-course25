@@ -3,6 +3,12 @@ import { FC, Suspense } from "react";
 import styles from "./page.module.css";
 import RacketsContainer from "@/components/RacketsContainer";
 import Top10RacketsContainer from "@/components/Top10RacketsContainer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tennis shop: Ракетки",
+  description: "Список всех ракеток магазина Tennis shop",
+};
 
 const Page: FC = () => {
   return (
