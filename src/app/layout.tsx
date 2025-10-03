@@ -1,19 +1,27 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "./globals.css";
+import { getUser } from "@/services/get-user";
+import { UserProvider } from "./providers/user-provider";
+import { FC } from "react";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout: FC<
+  Readonly<{
+    children: React.ReactNode;
+  }>
+> = async ({ children }) => {
+  const { data } = await getUser();
   return (
     <html lang="en">
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <UserProvider user={data}>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </UserProvider>
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

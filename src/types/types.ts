@@ -19,3 +19,12 @@ export type Response<Entity> = {
   isError: boolean;
   data?: Entity;
 };
+
+export interface IUser {
+  name: string;
+}
+
+export interface LoginState {
+  error?: string;
+  redirectTo?: string;
+}

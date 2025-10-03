@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import styles from "./racket.module.css";
 import { RacketType } from "@/types/types";
+import { FavoriteButton } from "./FavoriteButton";
 
 type RacketProps = {
   racket: RacketType;
@@ -24,6 +25,7 @@ const Racket = ({ racket }: RacketProps) => {
         />
       </div>
       <div className={styles.price}>${racket.price}</div>
+      <FavoriteButton isFavorite={false} />
     </div>
   );
 };
