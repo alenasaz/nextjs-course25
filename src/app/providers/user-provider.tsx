@@ -1,0 +1,18 @@
+"use client";
+
+import { IUser } from "@/types/types";
+import { createContext, FC, PropsWithChildren } from "react";
+
+interface UserContextType {
+  user: IUser | undefined;
+}
+export const UserContext = createContext<UserContextType>({ user: undefined });
+
+interface Props extends PropsWithChildren {
+  user: IUser | undefined;
+}
+
+export const UserProvider: FC<Props> = ({ user, children }) => {
+  console.log(user);
+  return <UserContext value={{ user }}>{children}</UserContext>;
+};

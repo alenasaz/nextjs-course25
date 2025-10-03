@@ -3,8 +3,12 @@
 import styles from "./header.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import LogoutButton from "./LogoutButton";
+import { use } from "react";
+import { UserContext } from "@/app/providers/user-provider";
 
 const Header = () => {
+  const { user } = use(UserContext);
   const pathname = usePathname();
 
   // Функция для проверки активного пути
@@ -44,6 +48,13 @@ const Header = () => {
           >
             Топ-10
           </Link>
+          {user ? (
+            <LogoutButton />
+          ) : (
+            <Link className={`${styles.navLink}`} href="/login">
+              Войти
+            </Link>
+          )}
         </div>
       </div>
     </header>
