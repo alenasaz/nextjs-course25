@@ -13,6 +13,5 @@ interface Props extends PropsWithChildren {
 }
 
 export const UserProvider: FC<Props> = ({ user, children }) => {
-  console.log(user);
   return <UserContext value={{ user }}>{children}</UserContext>;
 };
