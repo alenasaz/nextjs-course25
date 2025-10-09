@@ -13,6 +13,9 @@ export type RacketType = {
     id: number;
     name: string;
   };
+  userData?: {
+    isFavorite?: boolean;
+  };
 };
 
 export type Response<Entity> = {

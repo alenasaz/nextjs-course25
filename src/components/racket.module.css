@@ -40,3 +40,10 @@
   font-size: 1.125rem;
   text-align: right;
 }
+
+.bookmark {
+  margin-left: auto;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}

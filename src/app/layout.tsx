@@ -4,6 +4,7 @@ import "./globals.css";
 import { getUser } from "@/services/get-user";
 import { UserProvider } from "./providers/user-provider";
 import { FC } from "react";
+import { FavoriteProvider } from "./providers/favorite-provider";
 
 const RootLayout: FC<
   Readonly<{
@@ -11,13 +12,16 @@ const RootLayout: FC<
   }>
 > = async ({ children }) => {
   const { data } = await getUser();
+  console.log(data, "data");
   return (
     <html lang="en">
       <body>
         <UserProvider user={data}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <FavoriteProvider>
+            <Header />
+            {children}
+            <Footer />
+          </FavoriteProvider>
         </UserProvider>
       </body>
     </html>

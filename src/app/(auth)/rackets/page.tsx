@@ -16,9 +16,9 @@ const RacketsPage: FC = async () => {
 
   return (
     <div className={styles.racketsPageWrapper}>
-      <main>
+      <div>
         <RacketList items={data} />
-      </main>
+      </div>
     </div>
   );
 };

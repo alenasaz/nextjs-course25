@@ -21,16 +21,9 @@ const SignUpPage = () => {
     }
   }, [redirectTo]);
 
-  const router = useRouter();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    router.push("/");
-  };
-
   return (
     <div className={styles.container}>
-      <form action={formAction} className={styles.form} onSubmit={handleSubmit}>
+      <form action={formAction} className={styles.form}>
         <h1 className={styles.title}>Регистрация</h1>
 
         <div className={styles.inputGroup}>

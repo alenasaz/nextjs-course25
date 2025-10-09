@@ -1,10 +1,12 @@
-import styles from "./page.module.css";
+import styles from "../app/(auth)/page.module.css";
 
-export default function Loading() {
+const Loading = () => {
   return (
     <div className={styles.containerLoading}>
       <div className={styles.spinner}></div>
       <p className={styles.text}>Загрузка...</p>
     </div>
   );
-}
+};
+
+export default Loading;
