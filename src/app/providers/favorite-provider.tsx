@@ -35,8 +35,6 @@ export const FavoriteProvider: FC<PropsWithChildren> = ({ children }) => {
         return prev;
       }
 
-      console.log(prev);
-
       return {
         ...prev,
         [id]: isFavorite,
