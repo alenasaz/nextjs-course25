@@ -14,9 +14,9 @@ const RacketsTop10Page: FC = async () => {
   }
 
   return (
-    <main>
+    <div>
       <RacketList items={data} />
-    </main>
+    </div>
   );
 };
 
